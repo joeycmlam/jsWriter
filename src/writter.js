@@ -17,10 +17,5 @@ var writter = function () {
     const allUsers = require('../data/sample.json');
     var xls = json2xlsx.write(filename, 'user', allUsers)
 
-    fs.writeFileSync(filename, xls, 'binary', (err) => {
-        if (err) {
-            console.log("writeFileSync :", err);
-        }
-        console.log( filename+" file is saved!");
-    });
+    console.log('completed!')
 }
